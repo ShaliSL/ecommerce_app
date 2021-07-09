@@ -1,0 +1,28 @@
+<h1>Billing Address</h1>
+<%= form_tag '/login' do %>
+    <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter your name" %>
+    <br>
+    <br>
+    <%= text_field_tag :street, nil, class: "form-control", placeholder: "Enter your street address" %>
+    <br>
+    <br>
+    <%= text_field_tag :city, nil, class: "form-control", placeholder: "Enter your city address" %>
+    <br>
+    <br>
+    <%= text_field_tag :country, nil, class: "form-control", placeholder: "Enter your country" %>
+    <br>
+    <br>
+    <%= text_field_tag :state, nil, class: "form-control", placeholder: "Enter your state" %>
+    <br>
+    <br>
+    <%= text_field_tag :zip, nil, class: "form-control", placeholder: "Enter your zip" %>
+    <br>
+    <br>
+    <%= text_field_tag :phone, nil, class: "form-control", placeholder: "Enter your phone number" %>
+    <br>
+    <br>
+    <%= submit_tag "Submit" %>
+    <%= submit_tag "Confirm"%>
+
+  <% end %>
+

@@ -1,0 +1,33 @@
+<section class="sessions-show">
+
+  <header class="page-header">
+    <h1>
+      Payment
+    </h1>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+<%= form_tag '/login' do %>
+    <%= radio_button_tag "reply", true, true %>
+    <%= label_tag "reply_yes", 'Credit Card' %>
+    <%= radio_button_tag "reply", false, false  %>
+    <%= label_tag "reply_yes", 'Debit Card' %>
+    <br><br>
+    <%= text_field_tag :name, nil, class: "form-control", placeholder: "Name on Card" %>
+    <br><br>
+    <%= text_field_tag :number, nil, class: "form-control", placeholder: "Enter your card number" %>
+    <br><br>
+    <%= text_field_tag :expiry, nil, class: "form-control", placeholder: "Enter your expiry number" %>
+    <br><br>
+    <%= text_field_tag :code, nil, class: "form-control", placeholder: "Enter your card code" %>
+    <br><br>
+    <%= submit_tag "Save and Continue", class: "btn btn-primary" %>
+    <%= link_to 'Confirm', '/confirm' %>
+<%end%>
+</div>
+</div>
+</div>
+
+</section>
