@@ -5,40 +5,63 @@ def open_asset(file_name)
   File.open(Rails.root.join('db', 'seed_assets', file_name))
 end
 
-## CATEGORIES
-
-puts "Finding or Creating Categories ..."
-
-cat1 = Category.find_or_create_by! name: 'Apparel'
-cat2 = Category.find_or_create_by! name: 'Electronics'
-cat3 = Category.find_or_create_by! name: 'Furniture'
-
 ## PRODUCTS
 
 puts "Re-creating Products ..."
 
 Product.destroy_all
 
-cat1.products.create!({
+Product.create!({
   name:  'Men\'s Classy shirt',
-  description: Faker::Hipster.paragraph(4),
+  description: 'Cotton',
   image: open_asset('cotton kurti.png'),
   quantity: 10,
   price: 64.99
 })
 
-cat1.products.create!({
+Product.create!({
   name:  'Women\'s Zebra pants',
-  description: Faker::Hipster.paragraph(4),
+  description: 'Blue Shirt',
   image: open_asset('blue t-shirt.png'),
   quantity: 18,
   price: 124.99
 })
 
-cat1.products.create!({
-  name:  'Hipster Hat',
-  description: Faker::Hipster.paragraph(4),
-  image: open_asset('party wear.png'),
-  quantity: 0,
-  price: 34.49
+##USERS
+
+User.destroy_all
+
+User.create!({
+  email: 'you@test.com',
+  password: '$2a$10$yNB98OCdmMOM3fLuQKMPZ.LIOLiHVJJACwwC/Bb9qe5njgEnavlGO',
+  firstname: 'David',
+  lastname: 'Davidsion',
+  created_at: '2017-07-08 21:41:44.563279',
+  updated_at: '2017-07-08 21:41:44.563279'
 })
+
+User.create!({
+  email: 'bill@whitehouse.com',
+  password: '$2a$10$yNB98OCdmMOM3fLuQKMPZ.LIOLiHVJJACwwC/Bb9qe5njgEnavlGO',
+  firstname: 'Bill',
+  lastname: 'Clonton',
+  created_at: '2017-07-08 21:41:44.563279',
+  updated_at: '2017-07-08 21:41:44.563279'
+})
+
+##CONTACTUS
+
+Contact.destroy_all
+
+Contact.create!({
+  name:  'Men\'s Classy shirt',
+  address: 'Cotton',
+  message: 'hi'
+})
+
+Contact.create!({
+  name:  'Women\'s Zebra pants',
+  description: 'Blue Shirt',
+  message: 'hii'
+})
+
