@@ -49,19 +49,3 @@ User.create!({
   updated_at: '2017-07-08 21:41:44.563279'
 })
 
-##CONTACTUS
-
-Contact.destroy_all
-
-Contact.create!({
-  name:  'Men\'s Classy shirt',
-  address: 'Cotton',
-  message: 'hi'
-})
-
-Contact.create!({
-  name:  'Women\'s Zebra pants',
-  description: 'Blue Shirt',
-  message: 'hii'
-})
-
