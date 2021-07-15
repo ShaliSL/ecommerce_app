@@ -9,13 +9,13 @@
     <div class="row">
     <div class="col-xs-6">
     <%=form_for:user, url: '/users' do |f|%>
-        <%= f.text_field :name,  class: "form-control", placeholder: "Enter your name" %>
+        <%= f.text_field :name,  class: "form-control", placeholder: "Enter your name" , required: true%>
         <br><br>
-        <%= f.text_field :mblno ,  class: "form-control",placeholder: "Enter your mobile number" %>
+        <%= f.text_field :mblno ,  class: "form-control",placeholder: "Enter your mobile number", required: true %>
         <br><br>
-        <%= f.text_field :email,  class: "form-control",placeholder: "Enter your Email" %>
+        <%= f.text_field :email,  class: "form-control",placeholder: "Enter your Email", required: true %>
         <br><br>
-        <%= f.password_field:password,  class: "form-control",placeholder: "Enter your password" %>
+        <%= f.password_field:password,  class: "form-control",placeholder: "Enter your password", required: true %>
         <br><br>
         <%= f.submit "Save", class: "btn btn-primary"  %>
     <%end%>
