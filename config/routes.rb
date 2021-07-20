@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'users/new'
   root 'products#index'
   get '/login' => 'sessions#new'
+  post '/login_user' => 'sessions#create'
   get '/register' => 'users#new'
   post '/users' => 'users#create'
   get '/carts' => 'carts#show'
