@@ -27,25 +27,4 @@ Product.create!({
   price: 124.99
 })
 
-##USERS
-
-User.destroy_all
-
-User.create!({
-  email: 'you@test.com',
-  password: '$2a$10$yNB98OCdmMOM3fLuQKMPZ.LIOLiHVJJACwwC/Bb9qe5njgEnavlGO',
-  firstname: 'David',
-  lastname: 'Davidsion',
-  created_at: '2017-07-08 21:41:44.563279',
-  updated_at: '2017-07-08 21:41:44.563279'
-})
-
-User.create!({
-  email: 'bill@whitehouse.com',
-  password: '$2a$10$yNB98OCdmMOM3fLuQKMPZ.LIOLiHVJJACwwC/Bb9qe5njgEnavlGO',
-  firstname: 'Bill',
-  lastname: 'Clonton',
-  created_at: '2017-07-08 21:41:44.563279',
-  updated_at: '2017-07-08 21:41:44.563279'
-})
 
