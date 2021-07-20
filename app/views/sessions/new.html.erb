@@ -5,21 +5,17 @@
       Login
     </h1>
   </header>
-
   <div class="container">
     <div class="row">
-      <div class="col-xs-6">
-    <%= form_tag '/login' do %>
-      <%= text_field_tag :email, nil, class: "form-control", placeholder: "Email", required: true %>
-      <br>
-      <br>
-      <%= password_field_tag :password, nil, class: "form-control", placeholder: "Password", required: true %>
-      <br>
-      <br>
-      <%= submit_tag "Submit", class: "btn btn-primary" %>
-    <% end %>
-  </div>
+    <div class="col-xs-6">
+    <%=form_for:user, url: '/login_user' do |f|%>
+        <%= f.text_field :email,  class: "form-control",placeholder: "Enter your Email", required: true %>
+        <br><br>
+        <%= f.password_field:password,  class: "form-control",placeholder: "Enter your password", required: true %>
+        <br><br>
+        <%= f.submit "Save", class: "btn btn-primary"  %>
+    <%end%>
+    </div>
+    </div>
 </div>
-</div>
-
 </section>
